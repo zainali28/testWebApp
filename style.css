@@ -1,0 +1,74 @@
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nav > div {
+    margin: 28px;
+    margin-bottom: 28px;
+    font-weight: bolder;
+    font-size: 48px;
+    position: relative;
+    flex: 1;
+    text-align: center;
+}
+
+.nav > div:hover {
+    margin: 26px;
+    border: 2px solid;
+    border-radius: 14px;
+    cursor: pointer;
+    background-color: orange;
+    box-shadow: orangered 5px 5px;
+}
+
+.nav > div:active {
+    background-color: orangered;
+    box-shadow: orange 5px 5px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.red-box {
+    content-visibility: hidden;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    border: 2px solid;
+    border-radius: 15%;
+    margin: 12px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 100px;
+    transition: 
+    opacity 0.3s,
+    background-color 0.5s, 
+    bottom 0.5s,
+    width 0.5s,
+    height 0.5s,
+    box-shadow 0.5s,
+    content-visibility 0.5s;
+}
+
+body {
+    background-color: bisque;
+    height: 200vh;
+}
+
+html {
+    scrollbar-color: red orange;
+    scrollbar-width: thin;
+}

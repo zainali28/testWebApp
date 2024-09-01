@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="index.js"></script>
+
+    <div class="nav">
+        <div>Home</div>
+        <div>About</div>
+    </div>
+
+    <div class="container">
+        <button name="Box" onclick="onClick(0)" onmouseenter="onHover(0)" onmouseleave="onLeave(0)" class="red-box">1</button>
+        <button name="Box" onclick="onClick(1)" onmouseenter="onHover(1)" onmouseleave="onLeave(1)" class="red-box">2</button>
+        <button name="Box" onclick="onClick(2)" onmouseenter="onHover(2)" onmouseleave="onLeave(2)" class="red-box">3</button>
+    </div>
+    <div class="container">
+        <button name="Box" onclick="onClick(3)" onmouseenter="onHover(3)" onmouseleave="onLeave(3)" class="red-box">4</button>
+        <button name="Box" onclick="onClick(4)" onmouseenter="onHover(4)" onmouseleave="onLeave(4)" class="red-box">5</button>
+        <button name="Box" onclick="onClick(5)" onmouseenter="onHover(5)" onmouseleave="onLeave(5)" class="red-box">6</button>
+    </div>
+    <div class="container">
+        <button name="Box" onclick="onClick(6)" onmouseenter="onHover(6)" onmouseleave="onLeave(6)" class="red-box">7</button>
+        <button name="Box" onclick="onClick(7)" onmouseenter="onHover(7)" onmouseleave="onLeave(7)" class="red-box">8</button>
+        <button name="Box" onclick="onClick(8)" onmouseenter="onHover(8)" onmouseleave="onLeave(8)" class="red-box">9</button>
+    </div>
+
+    <div onkeypress="keyStroke()"></div>
+
+    <div class="nav">
+        <div onclick="restart()">Restart</div>
+    </div>
+</body>
+</html>
