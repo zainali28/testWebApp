@@ -6,7 +6,7 @@ var disabled = Array(9).fill(false);
 function keyStrokeDown(event) {
     const key = event.key;
     var boxNum = (key >= 1 && key <= 9) ? (key - 1) : null;
-    document.getElementsByName("Box").forEach((element, index) => { ((index === boxNum) & capture[boxNum]) && (element.disabled = true); });
+    // document.getElementsByName("Box").forEach((element, index) => { ((index === boxNum) & capture[boxNum]) && (element.disabled = true); });
     const elem = document.getElementsByClassName('red-box');
     !((boxNum !== null) & (document.getElementsByName("Box")[boxNum].disabled)) && (elem[boxNum].setAttribute(
         "style", `width: ${enlarged[boxNum] ? "500px" : "100px"}; height: ${enlarged[boxNum] ? "500px" : "100px"}; background-color: ${enlarged[boxNum] ? "orangered" : "orange"}; box-shadow: ${enlarged[boxNum] ? "orange" : "orangered"} ${enlarged[boxNum] ? "20px" : "10px"} ${enlarged[boxNum] ? "20px" : "10px"}; opacity: ${capture[boxNum] & clicked[boxNum] ? "0.2" : "1"}; content-visibility: visible;`
@@ -18,7 +18,7 @@ function keyStrokeDown(event) {
 function keyStrokeUp(event) {
     const key = event.key;
     var boxNum = (key >= 1 && key <= 9) ? (key - 1) : null;
-    document.getElementsByName("Box").forEach((element, index) => { ((index === boxNum) & capture[boxNum]) && (element.disabled = true); });
+    // document.getElementsByName("Box").forEach((element, index) => { ((index === boxNum) & capture[boxNum]) && (element.disabled = true); });
     const elem = document.getElementsByClassName('red-box');
     capture[boxNum] = !clicked[boxNum] && true;
     enlarged[boxNum] = !enlarged[boxNum];
@@ -36,7 +36,7 @@ function restart() {
     enlarged = Array(9).fill(false);
     clicked = Array(9).fill(true);
     capture = Array(9).fill(false);
-    document.getElementsByName("Box").forEach((element) => { (element.disabled = false); });
+    // document.getElementsByName("Box").forEach((element) => { (element.disabled = false); });
     
     for(let i = 0; i < 9; i++) {
         elem[i].setAttribute(
@@ -46,7 +46,7 @@ function restart() {
 }
 
 function onClick(boxNum) {
-    document.getElementsByName("Box").forEach((element, index) => { ((index === boxNum) & capture[boxNum]) && (element.disabled = true); });
+    // document.getElementsByName("Box").forEach((element, index) => { ((index === boxNum) & capture[boxNum]) && (element.disabled = true); });
     const elem = document.getElementsByClassName('red-box');
     capture[boxNum] = !clicked[boxNum] && true;
     enlarged[boxNum] = !enlarged[boxNum];
@@ -57,7 +57,7 @@ function onClick(boxNum) {
 }
 
 function onHover(boxNum) {
-    document.getElementsByName("Box").forEach((element, index) => { ((index === boxNum) & capture[boxNum]) && (element.disabled = true); });
+    // document.getElementsByName("Box").forEach((element, index) => { ((index === boxNum) & capture[boxNum]) && (element.disabled = true); });
     const elem = document.getElementsByClassName('red-box');
     elem[boxNum].setAttribute(
         "style", `width: ${enlarged[boxNum] ? "500px" : "100px"}; height: ${enlarged[boxNum] ? "500px" : "100px"}; background-color: ${enlarged[boxNum] ? "orangered" : "orange"}; box-shadow: ${enlarged[boxNum] ? "orange" : "orangered"} ${enlarged[boxNum] ? "20px" : "10px"} ${enlarged[boxNum] ? "20px" : "10px"}; opacity: ${capture[boxNum] & clicked[boxNum] ? "0.2" : "1"}; content-visibility: visible;`
@@ -65,7 +65,7 @@ function onHover(boxNum) {
 }
 
 function onLeave(boxNum) {
-    document.getElementsByName("Box").forEach((element, index) => { ((index === boxNum) & capture[boxNum]) && (element.disabled = true); });
+    // document.getElementsByName("Box").forEach((element, index) => { ((index === boxNum) & capture[boxNum]) && (element.disabled = true); });
     const elem = document.getElementsByClassName('red-box');
     elem[boxNum].setAttribute(
         "style", `width: ${enlarged[boxNum] ? "500px" : "100px"}; height: ${enlarged[boxNum] ? "500px" : "100px"}; background-color: ${enlarged[boxNum] ? "orangered" : "orange"}; box-shadow: ${enlarged[boxNum] ? "orange" : "orangered"} 0px 0px; opacity: ${capture[boxNum] & clicked[boxNum] ? "0.2" : "1"};`
