@@ -7,7 +7,7 @@ function keyStrokeDown(event) {
     var boxNum = (key >= 1 && key <= 9) ? (key - 1) : null;
     const elem = document.getElementsByClassName('red-box');
     (boxNum !== null) && (elem[boxNum].setAttribute(
-        "style", `z-index: ${enlarged[boxNum] ? "10" : "0"}; transform: scale(${enlarged[boxNum] ? "2" : "1.1"}); background-color: ${enlarged[boxNum] ? "orangered" : "orange"}; box-shadow: ${enlarged[boxNum] ? "orange" : "orangered"} ${enlarged[boxNum] ? "0px" : "10px"} ${enlarged[boxNum] ? "0px" : "10px"}; content-visibility: visible;`
+        "style", `z-index: ${enlarged[boxNum] ? "10" : "0"}; transform: scale(${enlarged[boxNum] ? "2" : "1.1"}) translate(0%, -15%); background-color: ${enlarged[boxNum] ? "orangered" : "orange"}; box-shadow: ${enlarged[boxNum] ? "orange" : "orangered"} ${enlarged[boxNum] ? "0px" : "10px"} ${enlarged[boxNum] ? "0px" : "10px"}; content-visibility: visible;`
     ));
 }
 
@@ -18,8 +18,9 @@ function keyStrokeUp(event) {
     capture[boxNum] = !clicked[boxNum] && true;
     enlarged[boxNum] = !enlarged[boxNum];
     clicked[boxNum] = !clicked[boxNum];
+    
     (boxNum !== null) && (elem[boxNum].setAttribute(
-        "style", `z-index: 10; transform: scale(${enlarged[boxNum] ? "2" : "1"}); content-visibility: ${enlarged[boxNum] ? "visible" : "hidden"}; background-color: ${enlarged[boxNum] ? "orangered" : "orange"}; box-shadow: ${enlarged[boxNum] ? "orange" : "orangered"} ${enlarged[boxNum] ? "0px" : "10px"} ${enlarged[boxNum] ? "0px" : "10px"};`
+        "style", `z-index: 10; transform: scale(${enlarged[boxNum] ? "5" : "1"}) translate(0%, ${enlarged[boxNum] ? ((boxNum >= 0 & boxNum <= 2) ? "40%" : ((boxNum >= 3 & boxNum <= 5) ? "15%" : "-10%")) : "0%"}); content-visibility: ${enlarged[boxNum] ? "visible" : "hidden"}; background-color: ${enlarged[boxNum] ? "orangered" : "orange"};`
     ));
 
     if (boxNum !== null) {
