@@ -15,25 +15,21 @@
     </div>
 
     <div class="container">
-        <button name="Box" onclick="onClick(0)" onmouseenter="onHover(0)" onmouseleave="onLeave(0)" class="red-box">1</button>
-        <button name="Box" onclick="onClick(1)" onmouseenter="onHover(1)" onmouseleave="onLeave(1)" class="red-box">2</button>
-        <button name="Box" onclick="onClick(2)" onmouseenter="onHover(2)" onmouseleave="onLeave(2)" class="red-box">3</button>
+        <button name="Box" onmousedown="onHover(0)" onmouseup="onButtonRelease(0)" onmouseenter="onHover(0)" onmouseleave="onLeave(0)" class="red-box">1</button>
+        <button name="Box" onmousedown="onHover(1)" onmouseup="onButtonRelease(1)" onmouseenter="onHover(1)" onmouseleave="onLeave(1)" class="red-box">2</button>
+        <button name="Box" onmousedown="onHover(2)" onmouseup="onButtonRelease(2)" onmouseenter="onHover(2)" onmouseleave="onLeave(2)" class="red-box">3</button>
     </div>
     <div class="container">
-        <button name="Box" onclick="onClick(3)" onmouseenter="onHover(3)" onmouseleave="onLeave(3)" class="red-box">4</button>
-        <button name="Box" onclick="onClick(4)" onmouseenter="onHover(4)" onmouseleave="onLeave(4)" class="red-box">5</button>
-        <button name="Box" onclick="onClick(5)" onmouseenter="onHover(5)" onmouseleave="onLeave(5)" class="red-box">6</button>
+        <button name="Box" onmousedown="onHover(3)" onmouseup="onButtonRelease(3)" onmouseenter="onHover(3)" onmouseleave="onLeave(3)" class="red-box">4</button>
+        <button name="Box" onmousedown="onHover(4)" onmouseup="onButtonRelease(4)" onmouseenter="onHover(4)" onmouseleave="onLeave(4)" class="red-box">5</button>
+        <button name="Box" onmousedown="onHover(5)" onmouseup="onButtonRelease(5)" onmouseenter="onHover(5)" onmouseleave="onLeave(5)" class="red-box">6</button>
     </div>
     <div class="container">
-        <button name="Box" onclick="onClick(6)" onmouseenter="onHover(6)" onmouseleave="onLeave(6)" class="red-box">7</button>
-        <button name="Box" onclick="onClick(7)" onmouseenter="onHover(7)" onmouseleave="onLeave(7)" class="red-box">8</button>
-        <button name="Box" onclick="onClick(8)" onmouseenter="onHover(8)" onmouseleave="onLeave(8)" class="red-box">9</button>
+        <button name="Box" onmousedown="onHover(6)" onmouseup="onButtonRelease(6)" onmouseenter="onHover(6)" onmouseleave="onLeave(6)" class="red-box">7</button>
+        <button name="Box" onmousedown="onHover(7)" onmouseup="onButtonRelease(7)" onmouseenter="onHover(7)" onmouseleave="onLeave(7)" class="red-box">8</button>
+        <button name="Box" onmousedown="onHover(8)" onmouseup="onButtonRelease(8)" onmouseenter="onHover(8)" onmouseleave="onLeave(8)" class="red-box">9</button>
     </div>
 
     <div onkeypress="keyStroke()"></div>
-
-    <div class="nav">
-        <div onclick="restart()">Restart</div>
-    </div>
 </body>
 </html>

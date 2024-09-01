@@ -17,6 +17,10 @@
     position: relative;
     flex: 1;
     text-align: center;
+    transition:
+    cursor 0.3s,
+    background-color 0.3s,
+    box-shadow 0.3s;
 }
 
 .nav > div:hover {
@@ -40,7 +44,6 @@
 }
 
 .red-box {
-    content-visibility: hidden;
     display: flex;
     width: 100px;
     height: 100px;
@@ -51,6 +54,7 @@
     position: relative;
     align-items: center;
     justify-content: center;
+    content-visibility: hidden;
     font-weight: bolder;
     font-size: 100px;
     transition: 
@@ -60,7 +64,8 @@
     width 0.5s,
     height 0.5s,
     box-shadow 0.5s,
-    content-visibility 0.5s;
+    content-visibility 0.5s,
+    font-size 0.5s;
 }
 
 body {
