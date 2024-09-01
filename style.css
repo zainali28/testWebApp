@@ -58,19 +58,14 @@
     font-weight: bolder;
     font-size: 100px;
     transition: 
-    opacity 0.3s,
-    background-color 0.5s, 
-    bottom 0.5s,
-    width 0.5s,
-    height 0.5s,
+    transform 0.5s,
+    background-color 0.5s,
     box-shadow 0.5s,
-    content-visibility 0.5s,
-    font-size 0.5s;
+    z-index 0.5s;
 }
 
 body {
     background-color: bisque;
-    height: 200vh;
 }
 
 html {

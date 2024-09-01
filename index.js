@@ -33,20 +33,30 @@ function onButtonRelease(boxNum) {
     enlarged[boxNum] = !enlarged[boxNum];
     clicked[boxNum] = !clicked[boxNum];
     elem[boxNum].setAttribute(
-        "style", `width: ${enlarged[boxNum] ? "500px" : "100px"}; height: ${enlarged[boxNum] ? "500px" : "100px"}; content-visibility: ${enlarged[boxNum] ? "visible" : "hidden"}; font-size: ${enlarged[boxNum] ? "200px" : "100px"}; background-color: ${enlarged[boxNum] ? "orangered" : "orange"}; box-shadow: ${enlarged[boxNum] ? "orange" : "orangered"} ${enlarged[boxNum] ? "20px" : "10px"} ${enlarged[boxNum] ? "20px" : "10px"};`
+        "style", `z-index: 10; transform: scale(${enlarged[boxNum] ? "2" : "1"}); content-visibility: ${enlarged[boxNum] ? "visible" : "hidden"}; background-color: ${enlarged[boxNum] ? "orangered" : "orange"}; box-shadow: ${enlarged[boxNum] ? "orange" : "orangered"} ${enlarged[boxNum] ? "0px" : "10px"} ${enlarged[boxNum] ? "0px" : "10px"};`
     );
-}
 
+    for (let i=0; i<9; i++) {
+        (i !== boxNum) && (enlarged[i] = false);
+        (i !== boxNum) && (clicked[i] = true);
+        (i !== boxNum) && (capture[i] = false);
+
+        (i !== boxNum) && elem[i].setAttribute(
+            "style", `z-index: ${enlarged[i] ? "10" : "0"}; transform: scale(${enlarged[i] ? "2" : "1"}); content-visibility: ${enlarged[i] ? "visible" : "hidden"}; background-color: ${enlarged[i] ? "orangered" : "orange"}; box-shadow: ${enlarged[i] ? "orange" : "orangered"} ${enlarged[i] ? "0px" : "0px"} ${enlarged[i] ? "0px" : "0px"};`
+        );
+    }
+}
+ 
 function onHover(boxNum) {
     const elem = document.getElementsByClassName('red-box');
     elem[boxNum].setAttribute(
-        "style", `width: ${enlarged[boxNum] ? "500px" : "100px"}; height: ${enlarged[boxNum] ? "500px" : "100px"}; font-size: ${enlarged[boxNum] ? "200px" : "100px"}; background-color: ${enlarged[boxNum] ? "orangered" : "orange"}; box-shadow: ${enlarged[boxNum] ? "orange" : "orangered"} ${enlarged[boxNum] ? "20px" : "10px"} ${enlarged[boxNum] ? "20px" : "10px"}; content-visibility: visible;`
+        "style", `z-index: ${enlarged[boxNum] ? "10" : "0"}; transform: scale(${enlarged[boxNum] ? "2" : "1.1"}); background-color: ${enlarged[boxNum] ? "orangered" : "orange"}; box-shadow: ${enlarged[boxNum] ? "orange" : "orangered"} ${enlarged[boxNum] ? "0px" : "10px"} ${enlarged[boxNum] ? "0px" : "10px"}; content-visibility: visible;`
     );
 }
 
 function onLeave(boxNum) {
     const elem = document.getElementsByClassName('red-box');
     elem[boxNum].setAttribute(
-        "style", `width: ${enlarged[boxNum] ? "500px" : "100px"}; height: ${enlarged[boxNum] ? "500px" : "100px"}; font-size: ${enlarged[boxNum] ? "200px" : "100px"}; content-visibility: ${enlarged[boxNum] ? "visible" : "hidden"}; background-color: ${enlarged[boxNum] ? "orangered" : "orange"}; box-shadow: ${enlarged[boxNum] ? "orange" : "orangered"} 0px 0px;`
+        "style", `z-index: ${enlarged[boxNum] ? "10" : "0"}; transform: scale(${enlarged[boxNum] ? "2" : "1"}); content-visibility: ${enlarged[boxNum] ? "visible" : "hidden"}; background-color: ${enlarged[boxNum] ? "orangered" : "orange"}; box-shadow: ${enlarged[boxNum] ? "orange" : "orangered"} 0px 0px;`
     );
 }
