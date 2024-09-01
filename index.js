@@ -19,7 +19,7 @@ function keyStrokeUp(event) {
     enlarged[boxNum] = !enlarged[boxNum];
     clicked[boxNum] = !clicked[boxNum];
     (boxNum !== null) && (elem[boxNum].setAttribute(
-        "style", `width: ${enlarged[boxNum] ? "500px" : "100px"}; height: ${enlarged[boxNum] ? "500px" : "100px"}; background-color: ${enlarged[boxNum] ? "orangered" : "orange"}; box-shadow: ${enlarged[boxNum] ? "orange" : "orangered"} ${enlarged[boxNum] ? "20px" : "10px"} ${enlarged[boxNum] ? "20px" : "10px"}; content-visibility: ${enlarged[boxNum] ? "visible" : "hidden"}; font-size: ${enlarged[boxNum] ? "200px" : "100px"};`
+        "style", `width: ${enlarged[boxNum] ? "500px" : "100px"}; height: ${enlarged[boxNum] ? "500px" : "100px"}; background-color: ${enlarged[boxNum] ? "orangered" : "orange"}; box-shadow: ${enlarged[boxNum] ? "orange" : "orangered"} 0px 0px; content-visibility: ${enlarged[boxNum] ? "visible" : "hidden"}; font-size: ${enlarged[boxNum] ? "200px" : "100px"};`
     ));
 }
 
