@@ -19,7 +19,7 @@ function keyStrokeUp(event) {
     enlarged[boxNum] = !enlarged[boxNum];
     clicked[boxNum] = !clicked[boxNum];
     (boxNum !== null) && (elem[boxNum].setAttribute(
-        "style", `z-index: 10; transform: scale(${enlarged[boxNum] ? "2" : "1"}); content-visibility: ${enlarged[boxNum] ? "visible" : "hidden"}; background-color: ${enlarged[boxNum] ? "orangered" : "orange"};`
+        "style", `z-index: 10; transform: scale(${enlarged[boxNum] ? "2" : "1"}); content-visibility: ${enlarged[boxNum] ? "visible" : "hidden"}; background-color: ${enlarged[boxNum] ? "orangered" : "orange"}; box-shadow: ${enlarged[boxNum] ? "orange" : "orangered"} ${enlarged[boxNum] ? "0px" : "10px"} ${enlarged[boxNum] ? "0px" : "10px"};`
     ));
 
     if (boxNum !== null) {
@@ -29,7 +29,7 @@ function keyStrokeUp(event) {
             (i !== boxNum) && (capture[i] = false);
     
             (i !== boxNum) && elem[i].setAttribute(
-                "style", `z-index: ${enlarged[i] ? "10" : "0"}; transform: scale(${enlarged[i] ? "2" : "1"}); content-visibility: ${enlarged[i] ? "visible" : "hidden"}; background-color: ${enlarged[i] ? "orangered" : "orange"}; box-shadow: ${enlarged[i] ? "orange" : "orangered"} ${enlarged[i] ? "0px" : "0px"} ${enlarged[i] ? "0px" : "0px"};`
+                "style", `z-index: ${enlarged[i] ? "10" : "0"}; transform: scale(${enlarged[i] ? "2" : "1"}); content-visibility: ${enlarged[i] ? "visible" : "hidden"}; background-color: ${enlarged[i] ? "orangered" : "orange"};`
             );
         }
     }
